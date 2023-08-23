@@ -30,17 +30,27 @@ Output: true*/
 // Print the result to the console
 
 //2nd approch 
-const containsDuplicate =()=>{
-nums.sort((a,b)=> a-b)
-for(let i=0;i<nums.length;i++){
-    if(nums[i]===nums[i+1]){
-        return true;
-    }
-
-}
-return false;
-}
-const nums = [7,8,2,45,6,89,41,7,8];
-const result = containsDuplicate(nums)
-console.log(result)
+// const containsDuplicate =()=>{
+// nums.sort((a,b)=> a-b)
+// for(let i=0;i<nums.length;i++){
+//     if(nums[i]===nums[i+1]){
+//         return true;
+//     }
+// }
+// return false;
+// }
+// // const nums = [7,8,2,45,6,89,41,7,8];
+// const result = containsDuplicate(nums)
+// console.log(result)
 //time complexity o(nlogn)
+
+//3rd approch 
+
+function cDuplicate (nums){
+    let set = new Set(nums);
+return set.size !== nums.length
+ }
+ const nums = [7,8,2,45,6,89,41];
+const result2 = cDuplicate(nums)
+console.log(result2)
+//o(n)
